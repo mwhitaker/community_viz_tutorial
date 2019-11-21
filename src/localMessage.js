@@ -1,262 +1,228 @@
-/**
- * This file provides the mock "data" received
- * by your visualization code when you develop
- * locally.
- *
- */
 export const message = {
   "tables": {
     "DEFAULT": [
       {
         "dimID": [
-          "20190820"
+          "20191105"
         ],
         "metricID": [
-          3313,
-          12766
+          14354
         ]
       },
       {
         "dimID": [
-          "20190819"
+          "20191114"
         ],
         "metricID": [
-          2805,
-          11557
+          14310
         ]
       },
       {
         "dimID": [
-          "20190827"
+          "20191113"
         ],
         "metricID": [
-          2634,
-          11468
+          14216
         ]
       },
       {
         "dimID": [
-          "20190904"
+          "20191119"
         ],
         "metricID": [
-          2603,
-          11531
+          13970
         ]
       },
       {
         "dimID": [
-          "20190903"
+          "20191120"
         ],
         "metricID": [
-          2551,
-          10620
+          13921
         ]
       },
       {
         "dimID": [
-          "20190822"
+          "20191106"
         ],
         "metricID": [
-          2491,
-          11767
+          13436
         ]
       },
       {
         "dimID": [
-          "20190821"
+          "20191107"
         ],
         "metricID": [
-          2480,
-          11957
+          12899
         ]
       },
       {
         "dimID": [
-          "20190813"
+          "20191118"
         ],
         "metricID": [
-          2437,
-          11624
+          12730
         ]
       },
       {
         "dimID": [
-          "20190829"
+          "20191111"
         ],
         "metricID": [
-          2435,
-          10833
+          12471
         ]
       },
       {
         "dimID": [
-          "20190809"
+          "20191104"
         ],
         "metricID": [
-          2425,
-          13044
+          12421
         ]
       },
       {
         "dimID": [
-          "20190826"
+          "20191030"
         ],
         "metricID": [
-          2413,
-          11121
+          11645
         ]
       },
       {
         "dimID": [
-          "20190905"
+          "20191112"
         ],
         "metricID": [
-          2395,
-          10373
+          11472
         ]
       },
       {
         "dimID": [
-          "20190812"
+          "20191029"
         ],
         "metricID": [
-          2387,
-          10960
+          11277
         ]
       },
       {
         "dimID": [
-          "20190828"
+          "20191115"
         ],
         "metricID": [
-          2375,
-          10273
+          10858
         ]
       },
       {
         "dimID": [
-          "20190823"
+          "20191108"
         ],
         "metricID": [
-          2292,
-          10650
+          10151
         ]
       },
       {
         "dimID": [
-          "20190814"
+          "20191028"
         ],
         "metricID": [
-          2184,
-          10292
+          9989
         ]
       },
       {
         "dimID": [
-          "20190815"
+          "20191024"
         ],
         "metricID": [
-          2112,
-          9379
+          9972
         ]
       },
       {
         "dimID": [
-          "20190816"
+          "20191025"
         ],
         "metricID": [
-          2083,
-          10187
+          9818
         ]
       },
       {
         "dimID": [
-          "20190830"
+          "20191101"
         ],
         "metricID": [
-          2034,
-          9767
+          9658
         ]
       },
       {
         "dimID": [
-          "20190902"
+          "20191031"
         ],
         "metricID": [
-          1894,
-          6957
+          9122
         ]
       },
       {
         "dimID": [
-          "20190824"
+          "20191117"
         ],
         "metricID": [
-          1669,
-          6644
+          8572
         ]
       },
       {
         "dimID": [
-          "20190810"
+          "20191116"
         ],
         "metricID": [
-          1640,
-          6618
+          7740
         ]
       },
       {
         "dimID": [
-          "20190825"
+          "20191103"
         ],
         "metricID": [
-          1539,
-          6550
+          7370
         ]
       },
       {
         "dimID": [
-          "20190818"
+          "20191110"
         ],
         "metricID": [
-          1536,
-          6876
+          7041
         ]
       },
       {
         "dimID": [
-          "20190831"
+          "20191109"
         ],
         "metricID": [
-          1473,
-          6305
+          6958
         ]
       },
       {
         "dimID": [
-          "20190901"
+          "20191102"
         ],
         "metricID": [
-          1455,
-          5865
+          6922
         ]
       },
       {
         "dimID": [
-          "20190811"
+          "20191026"
         ],
         "metricID": [
-          1431,
-          6720
+          6655
         ]
       },
       {
         "dimID": [
-          "20190817"
+          "20191027"
         ],
         "metricID": [
-          1423,
-          5785
+          5807
         ]
       }
     ]
@@ -264,7 +230,7 @@ export const message = {
   "fields": {
     "dimID": [
       {
-        "id": "qt_tlovvsnv0b",
+        "id": "qt_g5lygri72b",
         "name": "Date",
         "type": "YEAR_MONTH_DAY",
         "concept": "DIMENSION"
@@ -272,95 +238,186 @@ export const message = {
     ],
     "metricID": [
       {
-        "id": "qt_m07w4snv0b",
-        "name": "Sessions",
-        "type": "NUMBER",
-        "concept": "METRIC"
-      },
-      {
-        "id": "qt_d7628tnv0b",
+        "id": "qt_0f91zqi72b",
         "name": "Pageviews",
         "type": "NUMBER",
         "concept": "METRIC"
       }
     ]
   },
-  "style": {},
+  "style": {
+    "lineColor": {
+      "defaultValue": "#9AA0A6"
+    },
+    "lineWeight": {
+      "defaultValue": 2
+    }
+  },
   "theme": {
     "themeFillColor": {
-      "color": "#FFFFFF"
+      "color": "#ffffff",
+      "themeRef": {
+        "index": 0
+      }
     },
     "themeFontColor": {
-      "color": "#616161"
+      "color": "#000000",
+      "themeRef": {
+        "index": 1
+      }
     },
     "themeFontFamily": "Roboto",
     "themeAccentFillColor": {
-      "color": "#4285F4"
+      "color": "#e0e0e0",
+      "themeRef": {
+        "index": 2
+      }
     },
     "themeAccentFontColor": {
-      "color": "#EFEFEF"
+      "color": "#000000",
+      "themeRef": {
+        "index": 3
+      }
     },
     "themeAccentFontFamily": "Roboto",
     "themeSeriesColor": [
       {
-        "color": "#4285F4"
+        "color": "#0072f0",
+        "seriesRef": {
+          "index": 0
+        },
+        "themeRef": {
+          "index": 4
+        }
       },
       {
-        "color": "#DB4437"
+        "color": "#00b6cb",
+        "seriesRef": {
+          "index": 1
+        },
+        "themeRef": {
+          "index": 5
+        }
       },
       {
-        "color": "#F4B400"
+        "color": "#f10096",
+        "seriesRef": {
+          "index": 2
+        },
+        "themeRef": {
+          "index": 6
+        }
       },
       {
-        "color": "#0F9D58"
+        "color": "#f66d00",
+        "seriesRef": {
+          "index": 3
+        },
+        "themeRef": {
+          "index": 7
+        }
       },
       {
-        "color": "#AB47BC"
+        "color": "#ffa800",
+        "seriesRef": {
+          "index": 4
+        },
+        "themeRef": {
+          "index": 8
+        }
       },
       {
-        "color": "#00ACC1"
+        "color": "#7cb342",
+        "seriesRef": {
+          "index": 5
+        },
+        "themeRef": {
+          "index": 9
+        }
       },
       {
-        "color": "#FF7043"
+        "color": "#5e35b1",
+        "seriesRef": {
+          "index": 6
+        }
       },
       {
-        "color": "#9E9D24"
+        "color": "#03a9f4",
+        "seriesRef": {
+          "index": 7
+        }
       },
       {
-        "color": "#5C6BC0"
+        "color": "#ec407a",
+        "seriesRef": {
+          "index": 8
+        }
       },
       {
-        "color": "#F06292"
+        "color": "#ff7043",
+        "seriesRef": {
+          "index": 9
+        }
       },
       {
-        "color": "#00796b"
+        "color": "#737373",
+        "seriesRef": {
+          "index": 10
+        }
       },
       {
-        "color": "#c2185b"
+        "color": "#f15a60",
+        "seriesRef": {
+          "index": 11
+        }
       },
       {
-        "color": "#7e57c2"
+        "color": "#7ac36a",
+        "seriesRef": {
+          "index": 12
+        }
       },
       {
-        "color": "#03a9f4"
+        "color": "#5a9bd4",
+        "seriesRef": {
+          "index": 13
+        }
       },
       {
-        "color": "#8bc34a"
+        "color": "#faa75a",
+        "seriesRef": {
+          "index": 14
+        }
       },
       {
-        "color": "#fdd835"
+        "color": "#9e67ab",
+        "seriesRef": {
+          "index": 15
+        }
       },
       {
-        "color": "#fb8c00"
+        "color": "#ce7058",
+        "seriesRef": {
+          "index": 16
+        }
       },
       {
-        "color": "#8d6e63"
+        "color": "#d77fb3",
+        "seriesRef": {
+          "index": 17
+        }
       },
       {
-        "color": "#9e9e9e"
+        "color": "#81d4fa",
+        "seriesRef": {
+          "index": 18
+        }
       },
       {
-        "color": "#607d8b"
+        "color": "#f48fb1",
+        "seriesRef": {
+          "index": 19
+        }
       }
     ],
     "themeIncreaseColor": {
@@ -370,7 +427,7 @@ export const message = {
       "color": "#f44336"
     },
     "themeGridColor": {
-      "color": "#e9e9e9"
+      "color": "#d1d1d1"
     }
   },
   "interactions": {}

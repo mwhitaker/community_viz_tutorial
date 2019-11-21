@@ -13,7 +13,7 @@ const d3 = require('d3');
 // 1-May-12,58.13
 // 30-Apr-12,53.98
 
-export const LOCAL = true;
+export const LOCAL = false;
 
 function sortByDateAscending(a, b) {
   return a.date - b.date;
@@ -32,7 +32,7 @@ const drawViz = (dataIn) => {
   // set the ranges
   var x = d3.scaleTime().range([0, width]);
   var y = d3.scaleLinear().range([height, 0]);
-  
+
 
   // define the line
   var valueline = d3.line()
@@ -42,6 +42,10 @@ const drawViz = (dataIn) => {
   // append the svg obgect to the body of the page
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
+  d3.select('body')
+    .selectAll('svg')
+    .remove();
+
   var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -54,51 +58,51 @@ const drawViz = (dataIn) => {
   // Get the data
   // d3.csv("data.csv").then(dataBackup => {
 
-    var tblList = dataIn.tables.DEFAULT;
-    var data = tblList.map(row => {
-      return {
-        date: parseTime2(row["dimID"][0]),
-        close: row["metricID"][0]
-      }
-    }).sort(sortByDateAscending);
-    
-    // format the data
-    // data.forEach(function (d) {
-    //   d.date = parseTime(d.date);
-    //   d.close = +d.close;
-    // });
-    
+  var tblList = dataIn.tables.DEFAULT;
+  var data = tblList.map(row => {
+    return {
+      date: parseTime2(row["dimID"][0]),
+      close: row["metricID"][0]
+    }
+  }).sort(sortByDateAscending);
+
+  // format the data
+  // data.forEach(function (d) {
+  //   d.date = parseTime(d.date);
+  //   d.close = +d.close;
+  // });
 
 
 
-    // Scale the range of the data
-    x.domain(d3.extent(data, function (d) { return d.date; }));
-    y.domain([0, d3.max(data, function (d) { return d.close; })]);
 
-    // let style = {
-    //   lineColor:
-    //   dataIn.style.lineColor.value !== undefined
-    //         ? dataIn.style.lineColor.value.color
-    //         : dataIn.style.lineColor.defaultValue,
-    //     lineWeight:
-    //     dataIn.style.lineWeight.value !== undefined
-    //         ? dataIn.style.lineWeight.value
-    //         : dataIn.style.lineWeight.defaultValue
-    //   }
+  // Scale the range of the data
+  x.domain(d3.extent(data, function (d) { return d.date; }));
+  y.domain([0, d3.max(data, function (d) { return d.close; })]);
 
-    // Add the valueline path.
-    svg.append("path")
-      .data([data])
-      .attr("class", "line")    // this is where the style gets set in the css file.
-      .attr("d", valueline);
-       // .attr("stroke", style.lineColor).attr("stroke-width", style.lineWeight + "px")
+  let style = {
+    lineColor:
+      dataIn.style.lineColor.value !== undefined
+        ? dataIn.style.lineColor.value.color
+        : dataIn.style.lineColor.defaultValue,
+    lineWeight:
+      dataIn.style.lineWeight.value !== undefined
+        ? dataIn.style.lineWeight.value
+        : dataIn.style.lineWeight.defaultValue
+  }
 
-    // Add the X Axis
-    svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+  // Add the valueline path.
+  svg.append("path")
+    .data([data])
+    // .attr("class", "line")    // this is where the style gets set in the css file.
+    .attr("d", valueline)
+    .attr("stroke", style.lineColor).attr("fill", "none").attr("stroke-width", style.lineWeight + "px")
 
-    d3.axisLeft(y)(svg.append("g"))
+  // Add the X Axis
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  d3.axisLeft(y)(svg.append("g"))
 };
 
 
@@ -115,5 +119,5 @@ const drawViz = (dataIn) => {
 if (LOCAL) {
   drawViz(local.message);
 } else {
-  dscc.subscribeToData(drawViz, {transform: dscc.objectTransform});
+  dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
 }
