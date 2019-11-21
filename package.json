@@ -19,5 +19,7 @@
     "@google/dscc": "^0.3.8",
     "@google/dscc-scripts": "^1.0.10"
   },
-  "dependencies": {}
+  "dependencies": {
+    "d3": "^5.14.2"
+  }
 }
